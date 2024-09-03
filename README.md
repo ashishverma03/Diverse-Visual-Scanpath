@@ -1,7 +1,7 @@
 # Generative Augmentation Driven Prediction of Diverse Visual Scanpaths in Images
 This repository contains the PyTorch implementation for our IEEE TAI paper:
 
-**Ashish Verma, Debashis Sen. Generative Augmentation Driven Prediction of Diverse Visual Scanpaths in Images.**
+**Ashish Verma, Debashis Sen. Generative Augmentation Driven Prediction of Diverse Visual Scanpaths in Images. [Webpage](https://ashishverma03.github.io/Diverse-Visual-Scanpath)**
 
 ## Requirements
 * Python 3.7
@@ -10,8 +10,8 @@ This repository contains the PyTorch implementation for our IEEE TAI paper:
 
 ## Test Codes
 
-* Store your test images inside the 'test' folder in the dataset folder in the root directory. 
-* To run the code, you need to download the pre-trained model from [here](https://drive.google.com/drive/u/1/folders/18MQwqiqVuIn5sGf2ngZlRj2_PZSeXFWN), and extract files to the models folder in the root directory.
+* Store your test images inside the 'test' folder in the [dataset](https://github.com/ashishverma03/Diverse-Visual-Scanpath/tree/main/dataset) folder in the root directory. 
+* To run the code, you need to download the pre-trained model from [here](https://drive.google.com/drive/u/1/folders/18MQwqiqVuIn5sGf2ngZlRj2_PZSeXFWN), and extract files to the [models](https://github.com/ashishverma03/Diverse-Visual-Scanpath/tree/main/models) folder in the root directory.
 * Set argument --mode to 0 for generating scanpaths of different varieties and 1 for generating multiple scanpaths of the same variety.
 
 ```run the code
@@ -21,13 +21,13 @@ python test.py --mode 0
 
 ## Train Codes
 
-* The pre-processed OSIE dataset used in training is provided [here](https://drive.google.com/drive/u/1/folders/18MQwqiqVuIn5sGf2ngZlRj2_PZSeXFWN). Keep extracted train, val and test folders in the dataset folder in the root directory.
+* The pre-processed OSIE dataset used in training is provided [here](https://drive.google.com/drive/u/1/folders/18MQwqiqVuIn5sGf2ngZlRj2_PZSeXFWN). Keep extracted train, val and test folders in the [dataset](https://github.com/ashishverma03/Diverse-Visual-Scanpath/tree/main/dataset) folder in the root directory.
 * Check arguments in the [train.py](https://github.com/ashishverma03/Diverse-Visual-Scanpath/blob/main/train.py), for different configurations and settings.
 
   ``` run the codes
   python train.py
   ```
-* Check the 'models' folder in the root directory for trained models.
+* Check the [models](https://github.com/ashishverma03/Diverse-Visual-Scanpath/tree/main/models) folder in the root directory for trained models.
 
 ## Reference
 Please consider citing the paper if you find the code useful in your research.
