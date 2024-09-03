@@ -3,12 +3,18 @@ This repository contains the PyTorch implementation for our IEEE TAI paper:
 
 **Ashish Verma, Debashis Sen. Generative Augmentation Driven Prediction of Diverse Visual Scanpaths in Images.**
 
+## Requirements
+* Python 3.7
+* PyTorch 0.4.1 (advanced version can also be used with slight modifications)
+* We also provide a requirement.txt file.
+
 ## Test Codes
 
-To perform Low-light Image Enhancement using our pre-trained model, run the following command:
+* Store your test images inside the 'test' folder in the dataset folder in the root directory. 
+* To run the code, you need to download the pre-trained model from here, and extract files to the models folder in the root directory. 
 
-```bash
-python train.py
+```run the code
+python test.py --mode 0
 ```
 
 ## Reference
