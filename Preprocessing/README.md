@@ -18,3 +18,4 @@ parentfolder
             ├── .....
             └── nameN.mat
 ```
+* The 'Resized_Traj_image' folder contains scanpaths of images of a dataset. For each image, a '.mat' file contains a cell array of dimension 1xN which contains N scanpaths of size 2xL, where L is scanpath length.
