@@ -84,24 +84,19 @@ for img_idx = 1:size(Resized_fix_dir,1)
                 Gen_traj{2,i} = num_clust(clust_id);
             end
 
-            dirName = [parentfolder '\HMM_gen_traj_label1\' image_name(1:end-4) '.mat\'];
+            dirName = [parentfolder '\HMM_gen_traj_label1\'];
             if ~exist(dirName, 'dir')
                 mkdir(dirName);
             end
             cd(dirName);
             filename = image_name(1:end-4);
-            save(filename,'Gen_traj');
-            save([filename '_' num2str(traj_id,'%01d') 'T'],'T');
-            save([filename '_' num2str(traj_id,'%01d') 'P0'],'p0');
-            save([filename '_' num2str(traj_id,'%01d') 'C'],'C');
-            save([filename '_' num2str(traj_id,'%01d') 'R'],'R');
-            
+            save(filename,'Gen_traj');   
         end
         
     end
     
     % % Saving array of labels for Original images according to clustering
-    dirName_label = [parentfolder '\Labels_org_traj\' image_name(1:end-4) '\'];
+    dirName_label = [parentfolder '\Labels_org_traj\'];
     if ~exist(dirName_label, 'dir')
         mkdir(dirName_label);
     end
