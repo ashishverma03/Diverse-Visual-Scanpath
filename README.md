@@ -21,6 +21,7 @@ python test.py --mode 0
 
 ## Train Codes
 
+* The code for scanpath clustering and HMM-based generative augmentation is provided in the [Preporcessing](https://github.com/ashishverma03/Diverse-Visual-Scanpath/tree/main/Preprocessing) folder. 
 * The pre-processed OSIE dataset used in training is provided [here](https://drive.google.com/drive/u/1/folders/18MQwqiqVuIn5sGf2ngZlRj2_PZSeXFWN). The images are resized to 512x512 and the corresponding scanpaths are scaled down to match the image size. Download it and keep extracted train, val and test folders in the [dataset](https://github.com/ashishverma03/Diverse-Visual-Scanpath/tree/main/dataset) folder in the root directory.
 * Check arguments in the [train.py](https://github.com/ashishverma03/Diverse-Visual-Scanpath/blob/main/train.py), for different configurations and settings.
 
