@@ -11,14 +11,26 @@ This repository contains the PyTorch implementation for our IEEE TAI paper:
 ## Test Codes
 
 * Store your test images inside the 'test' folder in the dataset folder in the root directory. 
-* To run the code, you need to download the pre-trained model from here, and extract files to the models folder in the root directory. 
+* To run the code, you need to download the pre-trained model from [here](https://drive.google.com/drive/u/1/folders/18MQwqiqVuIn5sGf2ngZlRj2_PZSeXFWN), and extract files to the models folder in the root directory.
+* Set argument --mode to 0 for generating scanpaths of different varieties and 1 for generating multiple scanpaths of the same variety.
 
 ```run the code
 python test.py --mode 0
 ```
+* Check [Results](https://github.com/ashishverma03/Diverse-Visual-Scanpath/tree/main/Results) folder for generated scanpaths of either mode 0 or 1.
+
+## Train Codes
+
+* The pre-processed OSIE dataset used in training is provided [here](https://drive.google.com/drive/u/1/folders/18MQwqiqVuIn5sGf2ngZlRj2_PZSeXFWN). Keep extracted train, val and test folders in the dataset folder in the root directory.
+* Check arguments in the [train.py](https://github.com/ashishverma03/Diverse-Visual-Scanpath/blob/main/train.py), for different configurations and settings.
+
+  ``` run the codes
+  python train.py
+  ```
+* Check the 'models' folder in the root directory for trained models.
 
 ## Reference
-If you find the code useful in your research, please consider citing the paper.
+Please consider citing the paper if you find the code useful in your research.
 ```
 @ARTICLE{10130633,
   author={Verma, Ashish and Sen, Debashis},
