@@ -10,7 +10,6 @@ import nltk
 import pdb
 from PIL import Image
 
-
 def getFileNamesFromFolder(input_path, tag):
 
     files = []
@@ -30,7 +29,6 @@ class ImageDataset(data.Dataset):
 
         files_images = getFileNamesFromFolder(self.root_img, [".png", ".jpg", ".jpeg"])
         self.list_sample = sorted(files_images)
-
 
     def __getitem__(self, index):
         image_basename = self.list_sample[index]
