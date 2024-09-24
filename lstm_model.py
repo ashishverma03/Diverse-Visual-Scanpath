@@ -6,8 +6,6 @@ from torch.nn.utils.rnn import pack_padded_sequence
 from queue import PriorityQueue
 import pdb
 
-
-
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 class EncoderCNN(nn.Module):
@@ -114,9 +112,7 @@ class DecoderRNN(nn.Module):
 
         sampled_ids = torch.stack(sampled_ids, 1)                # sampled_ids: (batch_size, max_seq_length)
         return sampled_ids
-
-
-    
+        
     def beam_search_sample(self, features, labels, states=None):
         """Generate scanpaths for given image features using greedy search."""
         beam_width = 10
@@ -216,9 +212,6 @@ class DecoderRNN(nn.Module):
             utterance = utterance[::-1]
             utterance = torch.stack(utterance,1)
         return utterance
-
-
-
 
 class AverageMeter(object):
     def __init__(self):
