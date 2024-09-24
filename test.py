@@ -11,7 +11,6 @@ from lstm_model import EncoderCNN, DecoderRNN
 from PIL import Image
 import pdb
 
-
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -39,7 +38,6 @@ def main(args):
     test_data_loader = get_loader(args.image_path, transform, args.image_sz, args.patch_sz,
                              shuffle=False)
     
-
     # Build models
     encoder = EncoderCNN(args.embed_size).eval()  # eval mode (batchnorm uses moving mean/variance)
     decoder = DecoderRNN(args.embed_size, args.hidden_size, args.vocab_length, args.agr_score_vocab_length, args.agr_score_embed_size, args.num_layers).eval()
@@ -129,8 +127,6 @@ def main(args):
                         # class_seqID_BS_img[labels-1,sampled_ids.shape[0]-1] = 1026
                         # #-------------------------------------
 
-            
-
 def classIDtotraj(classID_map, sampled_ids, vocab_size, BOS, EOS, feat_x, feat_y, img_sz, img_org_sz):
 
     # seq_len = sampled_ids.shape[0]
@@ -157,8 +153,6 @@ def classIDtotraj(classID_map, sampled_ids, vocab_size, BOS, EOS, feat_x, feat_y
         scanpath[1,ind] = (y*int(img_org_sz[1]))/img_sz[1]
 
     return scanpath
-
-            
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
