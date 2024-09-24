@@ -40,7 +40,6 @@ class TrajDataset(data.Dataset):
 
         self.list_sample = sorted(files_scanpaths)
 
-
     def __getitem__(self, index):
         scan_basename = self.list_sample[index]
         #print(scan_basename)
@@ -74,7 +73,6 @@ class TrajDataset(data.Dataset):
     def __len__(self):
         return len(self.list_sample)
 
-
     def FixationtoclassID(self, traj):
 
         traj = traj[:,traj.min(axis=0)>=0]
@@ -97,7 +95,6 @@ class TrajDataset(data.Dataset):
         regionID_seq[len(traj[0])+1] = end_token
         regionID_seq = regionID_seq[regionID_seq<(self.feat_x*self.feat_y+3)]
         return regionID_seq
-
 
 def collate_fn(data):
     """Creates mini-batch tensors from the list of tuples (image, scanpath).
