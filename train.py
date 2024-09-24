@@ -12,7 +12,6 @@ from torch.nn.utils.rnn import pack_padded_sequence
 from torchvision import transforms
 import pdb
 
-
 # Device configuration
 device = torch.device( 'cuda' if torch.cuda.is_available() else 'cpu') #'cuda' if torch.cuda.is_available() else
 
@@ -57,7 +56,6 @@ def main(args):
         train(train_data_loader, encoder, decoder, criterion, optimizer, epoch, args)
         validate(val_data_loader, encoder, decoder, optimizer, epoch, args)
 
-
 def train(train_data_loader, encoder, decoder, criterion, optimizer, epoch, args):
         encoder.train()
         decoder.train()
@@ -66,7 +64,6 @@ def train(train_data_loader, encoder, decoder, criterion, optimizer, epoch, args
         train_loss = AverageMeter()
         total_step = len(train_data_loader)
         Avg_train_loss = np.zeros((1,total_step))
-        
 
         for i, (images, scanpaths, lengths, labels) in enumerate(train_data_loader):
 
@@ -110,7 +107,6 @@ def train(train_data_loader, encoder, decoder, criterion, optimizer, epoch, args
             #     torch.save(encoder.state_dict(), os.path.join(
             #         args.model_path, 'encoder-{}-{}.ckpt'.format(epoch+1, i+1)))
 
-
 def validate(val_data_loader, encoder, decoder, optimizer, epoch, args):
         encoder.eval()
         decoder.eval()
@@ -121,7 +117,6 @@ def validate(val_data_loader, encoder, decoder, optimizer, epoch, args):
             snapshot_name = 'epoch_%d' % (epoch)
             torch.save(decoder.state_dict(), os.path.join(args.model_path, 'decoder' + snapshot_name + '.ckpt'))
             torch.save(encoder.state_dict(), os.path.join(args.model_path, 'encoder' + snapshot_name + '.ckpt'))
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
