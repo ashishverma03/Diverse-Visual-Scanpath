@@ -1,1 +1,1 @@
-## Stores the trained encoder and decoder models.
+## Stores the trained encoder and decoder models here.
