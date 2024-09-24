@@ -33,7 +33,7 @@ python test.py --mode 0
 ## Reference
 Please consider citing the paper if you find the code useful in your research.
 ```
-@ARTICLE{10130633,
+@ARTICLE{Verma2024generative,
   author={Verma, Ashish and Sen, Debashis},
   journal={IEEE Transactions on Artificial Intelligence}, 
   title={Generative Augmentation-Driven Prediction of Diverse Visual Scanpaths in Images}, 
